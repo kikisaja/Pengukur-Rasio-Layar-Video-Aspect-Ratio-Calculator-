@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aspect Ratio Calculator 📱</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <!-- Header -->
+        <header class="app-header">
+            <span class="badge">kikisaja No. 150</span>
+            <h1>📱 ASPECT RATIO CALCULATOR</h1>
+            <p>Hitung otomatis dimensi lebar dan tinggi resolusi layar video!</p>
+        </header>
+
+        <!-- Ratio Selector Buttons -->
+        <div class="ratio-selector-grid">
+            <button type="button" class="ratio-btn active" data-w="16" data-h="9">16:9 (YouTube)</button>
+            <button type="button" class="ratio-btn" data-w="9" data-h="16">9:16 (Reels/TikTok)</button>
+            <button type="button" class="ratio-btn" data-w="4" data-h="3">4:3 (Klasik)</button>
+            <button type="button" class="ratio-btn" data-w="1" data-h="1">1:1 (Square)</button>
+        </div>
+
+        <!-- Calculator Inputs -->
+        <div class="calc-form">
+            <div class="input-group">
+                <label for="input-width">Lebar (Width - Px):</label>
+                <input type="number" id="input-width" value="1920" min="1">
+            </div>
+
+            <div class="swap-container">
+                <button type="button" id="btn-swap" class="btn-swap" title="Tukar Lebar & Tinggi">🔄 Tukar</button>
+            </div>
+
+            <div class="input-group">
+                <label for="input-height">Tinggi (Height - Px):</label>
+                <input type="number" id="input-height" value="1080" min="1">
+            </div>
+        </div>
+
+        <!-- Pratinjau Kotak Rasio Visual -->
+        <div class="preview-arena">
+            <div class="preview-box" id="preview-box">
+                <span id="preview-text">1920 x 1080 (16:9)</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
