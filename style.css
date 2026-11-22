@@ -1,0 +1,194 @@
+:root {
+    --bg-main: #38bdf8; /* Warna biru pop */
+    --card-bg: #ffffff;
+    --stroke-dark: #0f172a;
+    --pop-green: #4ade80;
+    --pop-yellow: #facc15;
+    --pop-pink: #f472b6;
+    --pop-blue: #38bdf8;
+    --pop-purple: #c084fc;
+    --text-dark: #0f172a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* --- KARTU UTAMA WIDGET --- */
+.app-card {
+    background-color: var(--card-bg);
+    padding: 26px;
+    border-radius: 24px;
+    border: 4px solid var(--stroke-dark);
+    box-shadow: 10px 10px 0px var(--stroke-dark);
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- HEADER --- */
+.app-header {
+    text-align: center;
+}
+
+.badge {
+    background-color: var(--pop-yellow);
+    color: var(--stroke-dark);
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.app-header h1 {
+    font-size: 1.25rem;
+    font-weight: 900;
+}
+
+.app-header p {
+    font-size: 0.78rem;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --- RATIO SELECTOR GRID --- */
+.ratio-selector-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.ratio-btn {
+    background-color: #f8fafc;
+    border: 2px solid var(--stroke-dark);
+    padding: 8px;
+    border-radius: 10px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+    transition: all 0.15s ease;
+}
+
+.ratio-btn.active {
+    background-color: var(--pop-green);
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0px var(--stroke-dark);
+}
+
+.ratio-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* --- CALCULATOR FORM --- */
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #f8fafc;
+    border: 3px solid var(--stroke-dark);
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-group label {
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.input-group input {
+    border: 2px solid var(--stroke-dark);
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.input-group input:focus {
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
+
+.swap-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-swap {
+    background-color: var(--pop-purple);
+    border: 2px solid var(--stroke-dark);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.72rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px var(--stroke-dark);
+}
+
+.btn-swap:active {
+    transform: translate(1px, 1px);
+    box-shadow: none;
+}
+
+/* --- PREVIEW ARENA --- */
+.preview-arena {
+    background-color: #0f172a;
+    border: 3px solid var(--stroke-dark);
+    border-radius: 16px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 0px var(--stroke-dark);
+    padding: 12px;
+    overflow: hidden;
+}
+
+.preview-box {
+    background-color: var(--pop-pink);
+    border: 2px solid var(--stroke-dark);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+.preview-box span {
+    font-size: 0.75rem;
+    font-weight: 900;
+    color: var(--stroke-dark);
+    text-align: center;
+}
